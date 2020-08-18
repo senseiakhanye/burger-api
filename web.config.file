@@ -1,0 +1,17 @@
+<configuration>
+    <customErrors mode="off" />    
+    <system.webServer>
+        <handlers>
+            <add name="iisnode" path="server.js" verb="*" modules="iisnode"/>
+        </handlers>
+        <rewrite>
+            <rules>
+            <rule name="DynamicContent">
+                <match url="/*" />
+                <action type="Rewrite" url="server.js"/>
+            </rule>
+            </rules>
+        </rewrite>
+        <httpErrors errorMode="Detailed"></httpErrors>
+    </system.webServer>
+</configuration>
