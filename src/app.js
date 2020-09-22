@@ -13,5 +13,8 @@ app.use(function(req, res, next) {
 app.use(express.json());
 app.use(orderRouter);
 app.use(priceRouter);
+app.get("/", (req, res) => {
+    res.status(404).send();
+})
 
 module.exports = app;

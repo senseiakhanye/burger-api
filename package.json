@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node server.js",
     "dev": "env-cmd -f ./.env nodemon server.js",
-    "test": "env-cmd -f ./.env.test jest --runInBand --detectOpenHandles --watch"
+    "dev-online": "env-cmd -f ./.env.online nodemon server.js",
+    "test": "jest --runInBand --detectOpenHandles --watch",
+    "test-dev": "env-cmd -f ./.env.test jest --runInBand --detectOpenHandles --watch",
+    "test-dev-online": "env-cmd -f ./.env.online.test jest --runInBand --detectOpenHandles --watch"
   },
   "jest": {
     "testEnvironment": "node"
