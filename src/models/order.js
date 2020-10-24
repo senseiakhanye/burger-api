@@ -24,27 +24,9 @@ const orderSchema = new mongoose.Schema({
         required: true
     },
     customer: {
-        name: {
-            type: String,
-            required: true,
-            minlength: 4
-        },
-        address: {
-            street: {
-                type: String,
-                required: true
-            },
-            zipCode: {
-                type: String
-            },
-            country: {
-                type: String
-            }
-        },
-        email: {
-            type: String,
-            required: true
-        }
+        type: mongoose.Schema.Types.ObjectId, 
+        required: true,
+        ref: 'User'
     },
     deliveryMethod: {
         type: String,

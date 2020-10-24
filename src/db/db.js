@@ -5,7 +5,6 @@ mongoose.connect(process.env.MONGO_URL, {
     useCreateIndex: true,
     useUnifiedTopology: true
 }).then(() => {
-    console.log("Connected");
 }).catch(error => {
     console.log(error);
 })
