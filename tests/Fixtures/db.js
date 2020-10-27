@@ -65,7 +65,7 @@ const user_2 = {
         country: "South Africa"
     },
     email: "kat2@kat2.co.za",
-    username: "testusername",
+    username: "testusername1",
     password: "thisiseasy123"
 };
 
